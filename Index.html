@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doon Facility Services | STP Maintenance, Security & Housekeeping in Dehradun</title>
+    <meta name="description" content="Doon Facility Services offers professional STP/WTP Operation & Maintenance, Security Guard Services, Deep Cleaning, and Technical Facility Management in Dehradun, Uttarakhand.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #f4f7f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        /* Header & Navbar */
+        header {
+            background: linear-gradient(135deg, #0b2545, #134074);
+            color: #fff;
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .logo span {
+            color: #4da8da;
+        }
+        .header-btn {
+            background-color: #25d366;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(11, 37, 69, 0.85), rgba(11, 37, 69, 0.85)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #e0e8f0;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+        .btn-call {
+            background-color: #ff9f1c;
+            color: #0b2545;
+        }
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: #fff;
+        }
+
+        /* Services Section */
+        .section {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 1.9rem;
+            color: #0b2545;
+            margin-bottom: 10px;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: #555;
+            margin-bottom: 40px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+        .service-card {
+            background: #fff;
+            padding: 30px 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border-top: 4px solid #134074;
+            transition: transform 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        .service-card h3 {
+            color: #0b2545;
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+        .service-card ul {
+            padding-left: 18px;
+            color: #555;
+            font-size: 0.95rem;
+        }
+        .service-card ul li {
+            margin-bottom: 8px;
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            background-color: #0b2545;
+            color: #fff;
+            padding: 60px 5%;
+            text-align: center;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 35px auto 0;
+        }
+        .feature-box {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 25px;
+            border-radius: 8px;
+        }
+        .feature-box h4 {
+            color: #ff9f1c;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* Contact Section */
+        .contact-box {
+            background: #fff;
+            padding: 40px 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+        }
+        .contact-info p {
+            font-size: 1.1rem;
+            margin: 12px 0;
+        }
+        .contact-info a {
+            color: #134074;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: #061527;
+            color: #aaa;
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 0.9rem;
+        }
+
+        /* Floating Buttons */
+        .floating-btns {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 9999;
+        }
+        .float-btn {
+            padding: 12px 18px;
+            border-radius: 50px;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            text-align: center;
+            font-size: 0.95rem;
+        }
+        .float-wa { background-color: #25d366; }
+        .float-call { background-color: #ff9f1c; color: #0b2545; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Doon <span>Facility Services</span></div>
+        <a href="tel:+918267090322" class="header-btn">📞 Call Now</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Complete Facility Management, STP Operations & Security Services</h1>
+        <p>Reliable Technical Maintenance, Trained Security Guards, STP/WTP Operations, and Commercial Housekeeping for Hotels, Resorts & Residential Societies in Dehradun.</p>
+        <div class="cta-buttons">
+            <a href="tel:+918267090322" class="btn btn-call">📞 Call: +91 8267090322</a>
+            <a href="https://wa.me/918267090322?text=Hello%20Doon%20Facility%20Services,%20I%20want%20to%20inquire%20about%20your%20services." class="btn btn-whatsapp">💬 WhatsApp Inquiry</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section">
+        <h2 class="section-title">Our Core Services</h2>
+        <p class="section-subtitle">End-to-End Operational & Maintenance Solutions Across Dehradun</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>⚙️ STP & WTP Operation & Maintenance</h3>
+                <ul>
+                    <li>24/7 Sewage & Water Treatment Plant Operation</li>
+                    <li>Chemical Dosing & Water Quality Monitoring</li>
+                    <li>Preventive Pump, Blower & Motor Maintenance</li>
+                    <li>Pollution Control Board (PCB) Compliance</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>🛡️ Security Guard Services</h3>
+                <ul>
+                    <li>Trained & Verified Security Guards</li>
+                    <li>24/7 Gate Control & Visitor Management</li>
+                    <li>Society, Hotel & Commercial Patrolling</li>
+                    <li>Strict Discipline & Uniform Standards</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>🧹 Housekeeping & Deep Cleaning</h3>
+                <ul>
+                    <li>Society Common Area & Clubhouse Upkeep</li>
+                    <li>Hotel, Resort & Corporate Housekeeping</li>
+                    <li>Complete Sanitization & Hygiene Solutions</li>
+                    <li>Basement, Corridor & Tank Cleaning</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>🔧 Preventive Technical Maintenance</h3>
+                <ul>
+                    <li>Plumbing, Electrical & Mechanical Support</li>
+                    <li>Routine Inspection of Pumps & Piping Networks</li>
+                    <li>Rapid Emergency Breakdown Response</li>
+                    <li>Customized Annual Maintenance Contracts (AMC)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+        <h2>Why Partner With Doon Facility Services?</h2>
+        <div class="features-grid">
+            <div class="feature-box">
+                <h4>✔ Trained & Verified Staff</h4>
+                <p>Experienced technical operators and background-verified security personnel.</p>
+            </div>
+            <div class="feature-box">
+                <h4>✔ Safety & Compliance</h4>
+                <p>Strict adherence to safety norms, PPE protocols, and log maintenance.</p>
+            </div>
+            <div class="feature-box">
+                <h4>✔ 24/7 Support</h4>
+                <p>Proactive supervision and quick response to emergency breakdowns.</p>
+            </div>
+            <div class="feature-box">
+                <h4>✔ Cost-Effective AMC</h4>
+                <p>Transparent and competitive commercial pricing tailored to your property.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="contact-box">
+            <h2 class="section-title">Contact Us for Site Visit & Quotation</h2>
+            <p style="margin-bottom: 20px; color: #555;">We serve Hotels, Resorts, Residential Societies (RWAs), and Commercial Complexes in Dehradun.</p>
+            <div class="contact-info">
+                <p>📍 <strong>Location:</strong> Dehradun, Uttarakhand</p>
+                <p>📞 <strong>Phone 1:</strong> <a href="tel:+918267090322">+91 8267090322</a></p>
+                <p>📞 <strong>Phone 2:</strong> <a href="tel:+917983629083">+91 7983629083</a></p>
+                <p>✉️ <strong>Email:</strong> <a href="mailto:doonfacilityservices@gmail.com">doonfacilityservices@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Doon Facility Services | Dehradun, Uttarakhand. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-btns">
+        <a href="https://wa.me/918267090322?text=Hello%20Doon%20Facility%20Services,%20I%20would%20like%20to%20discuss%20facility%20management%20services." class="float-btn float-wa">💬 WhatsApp</a>
+        <a href="tel:+918267090322" class="float-btn float-call">📞 Call Now</a>
+    </div>
+
+</body>
+</html>
